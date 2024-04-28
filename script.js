@@ -22,13 +22,13 @@ function renderWord(el) {
 
 renderWord(word);
 let index = 0;
-let isRunning = "folse";
+let isRunning = false;
 
 document.addEventListener("keydown", function(event) {
 
-    if (isRunning == "folse") {
+    if (isRunning === false) {
         timerStart();
-        isRunning = "true";
+        isRunning = true;
 
     }
 
@@ -98,4 +98,7 @@ function resetGame() {
     wrongCount.textContent = 0;
     wordMistakes.textContent = 0;
     timer.textContent = '00:00';
+    seconds = 0;
+    minutes = 0;
+    isRunning = false;
 }
